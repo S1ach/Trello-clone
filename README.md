@@ -2,6 +2,11 @@
 
 Премиальный, ультрасовременный клон Trello, построенный на **Next.js 15**, методологии **Feature-Sliced Design (FSD)**, **Prisma ORM** и потрясающем интерактивном интерфейсе в стиле glassmorphism.
 
+<img width="2549" height="1297" alt="image" src="https://github.com/user-attachments/assets/a7df1b5f-e0bc-46b1-9aa4-2d2f3f8f6cef" />
+<img width="2541" height="1298" alt="image" src="https://github.com/user-attachments/assets/a1571d3d-eb7b-45e4-8bef-822974090191" />
+
+
+
 [![React](https://img.shields.io/badge/React-19-blue.svg?logo=react&logoColor=white)](https://reactjs.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-15-black.svg?logo=next.js&logoColor=white)](https://nextjs.org/)
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4.0-38B2AC.svg?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
