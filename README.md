@@ -1,69 +1,50 @@
 # 🌌 Trello Clone Aurora
 
-A premium, state-of-the-art Trello clone built with **Next.js 15**, **Feature-Sliced Design (FSD)**, **Prisma ORM**, and a beautiful theme-aware glassmorphic user interface.
+Премиальный, ультрасовременный клон Trello, построенный на **Next.js 15**, методологии **Feature-Sliced Design (FSD)**, **Prisma ORM** и потрясающем интерактивном интерфейсе в стиле glassmorphism.
 
 [![React](https://img.shields.io/badge/React-19-blue.svg?logo=react&logoColor=white)](https://reactjs.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-15-black.svg?logo=next.js&logoColor=white)](https://nextjs.org/)
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS-v4.0-38B2AC.svg?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748.svg?logo=prisma&logoColor=white)](https://www.prisma.io/)
-[![FSD Architecture](https://img.shields.io/badge/Architecture-Feature--Sliced_Design-50BFF2.svg)](https://feature-sliced.design/)
+[![FSD Architecture](https://img.shields.io/badge/Архитектура-Feature--Sliced_Design-50BFF2.svg)](https://feature-sliced.design/)
 
 ---
 
-## 🎨 Premium Visual Showcase
+## 🚀 Основные особенности
 
-### ✨ Deep Neutral Dark Theme & Card Details
-Enjoy a highly polished, distraction-free neutral dark theme (`#0a0a0c`) designed to make details, tags, and actions pop.
-
-![Deep Neutral Dark Card Modal](./public/screenshots/card-modal-dark.png)
-
-### 📊 Real-time Board Analytics Dashboard
-Keep track of progress with an interactive burndown chart, priority distributions, and current task stats.
-
-![Interactive Analytics Dashboard](./public/screenshots/dashboard-dark.png)
-
-### ☀️ Refreshing Light Mode
-Swap themes instantly for a clean, professional, and accessible day-time palette.
-
-![Light Theme Card Modal](./public/screenshots/card-modal-light.png)
+*   **🎨 Уникальный дизайн и эффект стекла (Glassmorphism):** Компоненты с полупрозрачными размытыми фонами, градиентами Aurora и поддержкой загрузки пользовательских изображений для кастомизации доски.
+*   **🌙 Профессиональная темная тема:** Чистый матово-черный интерфейс (`#0a0a0c`) без сине-фиолетовых оттенков, снижающий нагрузку на глаза и повышающий концентрацию.
+*   **📊 Аналитическая панель (Dashboard):** ИнтерактивныеBurndown-диаграммы сгорания задач, учет дедлайнов, разделение по приоритетам и подробная статистика.
+*   **🌐 Двуязычный интерфейс (i18n):** Мгновенное переключение всего интерфейса между **английским** и **русским** языками в один клик.
+*   **⚡ Архитектура Feature-Sliced Design (FSD):** Идеально масштабируемая, декуплированная структура папок, разделяющая код по слоям для легкой поддержки.
+*   **💾 Локальная база данных SQLite:** Интеграция с **Prisma ORM** для реактивного сохранения Drag & Drop изменений, карточек, списков и чек-листов.
 
 ---
 
-## 🚀 Key Features
+## 🛠️ Технологический стек
 
-*   **🎨 True Dual-Theme & Glassmorphic depth:** Premium theme-aware components that use smooth translucent backdrops, vibrant Aurora gradients, and support local image/photo background uploads.
-*   **🌙 Professional Neutral Dark Mode:** Shifted from blue-purple tints to a clean matte-black backdrop (`#0a0a0c`) to minimize eye strain and match modern IDE aesthetics.
-*   **📊 Dynamic Analytics Dashboard:** Direct chart insights featuring task completion ratios, overdue deadlines, and interactive Burndown charts.
-*   **🌐 Fluent Internationalization (i18n):** Toggle layout and text languages dynamically between **English** and **Русский** with a single click.
-*   **⚡ Feature-Sliced Design (FSD) Directory:** A highly scalable, decoupled folder architecture ensuring code maintainability and robust separation of concerns.
-*   **💾 Fully-functional SQLite Client:** Real-time database sync using **Prisma ORM** for persistent Drag & Drop sorting, task checklist progress, and uploads.
-
----
-
-## 🛠️ Technology Stack
-
-| Category | Technology |
+| Категория | Технологии |
 | :--- | :--- |
-| **Core Framework** | React 19, Next.js 15 (App Router), TypeScript |
-| **Styling** | Tailwind CSS v4, Lucide React, Radix UI Primitives |
-| **State Management** | Redux Toolkit (RTK) |
-| **Database & ORM** | SQLite, Prisma ORM |
-| **Linting & Rules** | ESLint, Prettier, Husky Pre-commit hooks |
+| **Основной фреймворк** | React 19, Next.js 15 (App Router), TypeScript |
+| **Стилизация** | Tailwind CSS v4, Lucide React, Radix UI Primitives |
+| **Управление стейтом** | Redux Toolkit (RTK) |
+| **База данных и ORM** | SQLite, Prisma ORM |
+| **Стандарты качества** | ESLint, Prettier, Husky Pre-commit хуки |
 
 ---
 
-## 📂 FSD Architecture & Directory Structure
+## 📂 Структура проекта (FSD)
 
 ```yaml
 src/
-├── app/                  # Application routing, global store configurations, and providers
-├── entities/             # Business entities with independent slices (Board, Card, Column, Settings)
+├── app/                  # Роутинг, глобальные конфигурации хранилища (Redux Store) и провайдеры
+├── entities/             # Бизнес-сущности с изолированными слайсами (Board, Card, Column, Settings)
 │   ├── board/
 │   └── settings/
-├── shared/               # Reusable UI-kit components, API clients, i18n configs, and hook helpers
+├── shared/               # Переиспользуемые компоненты UI-kit, API клиенты, переводы i18n и хелперы
 │   ├── lib/
 │   └── ui/
-└── widgets/              # Composite widgets uniting multiple features (Board, Dashboard, Header)
+└── widgets/              # Композитные виджеты, объединяющие фичи (Board, Dashboard, Header)
     ├── board/
     ├── dashboard/
     ├── header/
@@ -72,33 +53,33 @@ src/
 
 ---
 
-## ⚙️ Quick Installation & Setup
+## ⚙️ Быстрый запуск и установка
 
-Follow these steps to spin up the development server locally:
+Выполните следующие шаги, чтобы запустить проект локально:
 
-### 1. Clone the Repository & Install Dependencies
+### 1. Клонируйте репозиторий и установите зависимости
 ```bash
 git clone https://github.com/S1ach/Trello-clone.git
 cd Trello-clone
 npm install
 ```
 
-### 2. Configure Database & Run Migration
-Generate the SQLite database and seed initial tables through Prisma:
+### 2. Сгенерируйте локальную базу данных Prisma
+Создайте SQLite базу данных и таблицы с начальными тестовыми данными:
 ```bash
 npx prisma db push
 ```
 
-### 3. Launch Development Server
+### 3. Запустите сервер разработки
 ```bash
 npm run dev
 ```
-Open **[http://localhost:3000](http://localhost:3000)** in your browser to view the application.
+Откройте **[http://localhost:3000](http://localhost:3000)** в браузере.
 
 ---
 
-## 🛡️ Security & Performance
+## 🛡️ Безопасность и оптимизация
 
-*   **Safe Static Routing:** Next.js 15 routing ensures zero exposure of critical APIs.
-*   **Optimal Rendering:** Glassmorphic backdrops leverage modern GPU-accelerated backdrop filters for seamless FPS performance.
-*   **Local Privacy:** All background uploads and SQLite items remain securely on your local storage.
+*   **Безопасный роутинг:** Next.js 15 предотвращает прямой доступ и утечку конфиденциальных API-ключей.
+*   **Оптимальный рендеринг:** Размытие и эффекты стекла оптимизированы для аппаратного ускорения видеокартой (GPU) для плавности интерфейса при 60+ FPS.
+*   **Локальная приватность:** Все загружаемые фоны и задачи SQLite хранятся исключительно на вашем локальном компьютере.
