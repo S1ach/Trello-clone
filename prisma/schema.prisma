@@ -1,0 +1,52 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Board {
+  id          String   @id @default(uuid())
+  title       String   @default("Trello Clone")
+  columnOrder String[]
+  columns     Column[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Column {
+  id      String   @id @default(uuid())
+  title   String
+  cardIds String[]
+  sortBy  String   @default("none")
+  boardId String
+  board   Board    @relation(fields: [boardId], references: [id], onDelete: Cascade)
+  cards   Card[]
+}
+
+model Card {
+  id          String    @id @default(uuid())
+  content     String
+  description String    @default("")
+  labels      String[]  @default([])
+  dueDate     DateTime?
+  checklist   Json      @default("[]")
+  priority    String?
+  attachments Json      @default("[]")
+  columnId    String
+  column      Column    @relation(fields: [columnId], references: [id], onDelete: Cascade)
+  createdAt   DateTime  @default(now())
+}
+
+model Settings {
+  id           String  @id @default("default")
+  backgroundId String  @default("ocean")
+  customImage  String?
+  locale       String  @default("ru")
+}
