@@ -8,10 +8,24 @@
 [![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748.svg?logo=prisma&logoColor=white)](https://www.prisma.io/)
 [![FSD Architecture](https://img.shields.io/badge/Архитектура-Feature--Sliced_Design-50BFF2.svg)](https://feature-sliced.design/)
 
-<img width="2548" height="1298" alt="image" src="https://github.com/user-attachments/assets/7b00cdd1-5b55-4bc5-a95b-529903157fa4" />
-<img width="2549" height="1297" alt="image" src="https://github.com/user-attachments/assets/a7df1b5f-e0bc-46b1-9aa4-2d2f3f8f6cef" />
 
 ---
+
+## 🖼️ Preview
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/7b00cdd1-5b55-4bc5-a95b-529903157fa4" alt="Trello Clone Board" width="100%" />
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/a7df1b5f-e0bc-46b1-9aa4-2d2f3f8f6cef" alt="Trello Clone Dashboard" width="100%" />
+    </td>
+  </tr>
+</table>
+
+---
+
 
 ## 🚀 Основные особенности
 
